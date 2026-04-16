@@ -128,7 +128,7 @@ elif salario_antes > 280 and salario_antes < 700:
     print(f"Aumento após reajuste: {aumento:.2f}")
     print(f"Salário depois do reajuste: {salario_depois:.2f}")
 
-elif salario_antes > 700 and salario_antes < 1500:
+elif salario_antes >= 700 and salario_antes < 1500:
     porcentagem = 10 / 100
     salario_depois = salario_antes + (salario_antes * porcentagem)
     aumento = salario_depois - salario_antes
