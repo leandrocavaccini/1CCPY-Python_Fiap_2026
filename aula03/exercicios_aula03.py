@@ -174,7 +174,7 @@ else:
         print("É um Triângulo Retângulo")
     elif ladoA ** 2 > (ladoB ** 2 + ladoC ** 2):
         print("É um Triângulo Obtusângulo")
-    else:
+    elif ladoA ** 2 < (ladoB ** 2 + ladoC ** 2):
         print("É um Triângulo Acutângulo")
 
     if ladoA == ladoB == ladoC:
