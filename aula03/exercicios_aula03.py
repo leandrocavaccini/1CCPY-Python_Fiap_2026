@@ -152,84 +152,32 @@ elif salario_antes >= 1500:
 
 #EXERCÍCIO 10
 
-print("---Nomeando Trinângulos---")
+print("---Nomeando Triângulos---")
 
 ladoA = float(input("Lado A do triângulo: "))
 ladoB = float(input("Lado B do triângulo: "))
 ladoC = float(input("Lado C do triângulo: "))
 
-def ordem_decrescente(ladoA, ladoB, ladoC):
-    if ladoA == ladoB == ladoC:
-        ordem_decrescente1 = ladoA, ladoB, ladoC
-
-    elif ladoA > ladoB == ladoC:
-        ordem_decrescente1 = ladoA, ladoB, ladoC
-
-    elif ladoA == ladoB > ladoC:
-        ordem_decrescente1 = ladoA, ladoB,  ladoC
-
-    elif ladoB > ladoA == ladoC:
-        ordem_decrescente1 = ladoB, ladoA, ladoC
-
-    elif ladoB == ladoC > ladoA:
-        ordem_decrescente1 = ladoB, ladoC, ladoA
-
-    elif ladoC > ladoA == ladoB:
-        ordem_decrescente1 = ladoC, ladoA, ladoB
-
-    elif ladoC == ladoA > ladoB:
-        ordem_decrescente1 = ladoC, ladoA, ladoB
-
-    elif ladoA > ladoB > ladoC:
-        ordem_decrescente1 = ladoA, ladoB, ladoC
-
-    elif ladoA > ladoC > ladoB:
-        ordem_decrescente1 = ladoA, ladoC, ladoB
-
-    elif ladoB > ladoA > ladoC:
-        ordem_decrescente1 = ladoB, ladoA, ladoC
-
-    elif ladoB > ladoC > ladoA:
-        ordem_decrescente1 = ladoB, ladoC, ladoA
-
-    elif ladoC > ladoA > ladoB:
-        ordem_decrescente1 = ladoC, ladoA, ladoB
-
-    elif ladoC > ladoB > ladoA:
-        ordem_decrescente1 = ladoC, ladoB, ladoA
-
-    return ordem_decrescente1
-
+if ladoB > ladoA and ladoB > ladoC:
+    aux = ladoA
+    ladoA = ladoB
+    ladoB = aux
+elif ladoC > ladoA:
+    aux = ladoA
+    ladoA = ladoC
+    ladoC = aux
 
 if ladoA >= (ladoB + ladoC):
-    print(f"Não forma Triângulo")
+    print("Não forma Triângulo")
+else:
+    if ladoA ** 2 == (ladoB ** 2 + ladoC ** 2):
+        print("É um Triângulo Retângulo")
+    elif ladoA ** 2 > (ladoB ** 2 + ladoC ** 2):
+        print("É um Triângulo Obtusângulo")
+    else:
+        print("É um Triângulo Acutângulo")
 
-if ladoA ** 2 == ((ladoB ** 2) + ( ladoC ** 2)):
-    print(f"É um Triângulo Retângulo")
-
-if ladoA ** 2 > ((ladoB ** 2) + ( ladoC ** 2)):
-    print(f"É um Triângulo Obtusângulo")
-
-if ladoA ** 2 < ((ladoB ** 2) + (ladoC ** 2)):
-    print(f"É um Triângulo Acutângulo")
-
-if ladoA == ladoB == ladoC:
-    print(f"É um Triângulo Equilátero")
-
-if ladoA > ladoB == ladoC:
-    print(f"É um Triângulo Isóceles")
-
-if ladoA == ladoB > ladoC:
-    print(f"É um Triângulo Isóceles")
-
-if ladoB > ladoA == ladoC:
-    print(f"É um Triângulo Isóceles")
-
-if ladoB == ladoC > ladoA:
-    print(f"É um Triângulo Isóceles")
-
-if ladoC > ladoA == ladoB:
-    print(f"É um Triângulo Isóceles")
-
-if ladoC == ladoA > ladoB:
-    print(f"É um Triângulo Isóceles")
+    if ladoA == ladoB == ladoC:
+        print("É um Triângulo Equilátero")
+    elif ladoA == ladoB or ladoA == ladoC or ladoB == ladoC:
+        print("É um Triângulo Isósceles")
