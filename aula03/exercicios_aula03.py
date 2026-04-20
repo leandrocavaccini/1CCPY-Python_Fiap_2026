@@ -121,7 +121,7 @@ if salario_antes <= 280:
     print(f"Aumento após reajuste: {aumento:.2f}")
     print(f"Salário depois do reajuste: {salario_depois:.2f}")
 
-elif salario_antes > 280 and salario_antes < 700:
+elif salario_antes > 280 and salario_antes <= 700:
     porcentagem = 15 / 100
     salario_depois = salario_antes + (salario_antes * porcentagem)
     aumento = salario_depois - salario_antes
@@ -130,7 +130,7 @@ elif salario_antes > 280 and salario_antes < 700:
     print(f"Aumento após reajuste: {aumento:.2f}")
     print(f"Salário depois do reajuste: {salario_depois:.2f}")
 
-elif salario_antes >= 700 and salario_antes < 1500:
+elif salario_antes > 700 and salario_antes < 1500:
     porcentagem = 10 / 100
     salario_depois = salario_antes + (salario_antes * porcentagem)
     aumento = salario_depois - salario_antes
@@ -149,35 +149,3 @@ elif salario_antes >= 1500:
     print(f"Salário depois do reajuste: {salario_depois:.2f}")
 
 #EXERCÍCIO 09
-
-#EXERCÍCIO 10
-
-print("---Nomeando Triângulos---")
-
-ladoA = float(input("Lado A do triângulo: "))
-ladoB = float(input("Lado B do triângulo: "))
-ladoC = float(input("Lado C do triângulo: "))
-
-if ladoB > ladoA and ladoB > ladoC:
-    aux = ladoA
-    ladoA = ladoB
-    ladoB = aux
-elif ladoC > ladoA:
-    aux = ladoA
-    ladoA = ladoC
-    ladoC = aux
-
-if ladoA >= (ladoB + ladoC):
-    print("Não forma Triângulo")
-else:
-    if ladoA ** 2 == (ladoB ** 2 + ladoC ** 2):
-        print("É um Triângulo Retângulo")
-    elif ladoA ** 2 > (ladoB ** 2 + ladoC ** 2):
-        print("É um Triângulo Obtusângulo")
-    elif ladoA ** 2 < (ladoB ** 2 + ladoC ** 2):
-        print("É um Triângulo Acutângulo")
-
-    if ladoA == ladoB == ladoC:
-        print("É um Triângulo Equilátero")
-    elif ladoA == ladoB or ladoA == ladoC or ladoB == ladoC:
-        print("É um Triângulo Isósceles")
