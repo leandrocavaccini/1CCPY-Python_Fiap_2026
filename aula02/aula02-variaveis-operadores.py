@@ -6,7 +6,7 @@ print(7 + 4)
 print ('7 + 4')
 print('7' + '4') # Concatenação de strings
 
-# comentário de linha de python
+# Comentário de linha de python
 '''
 Comentários
 de
