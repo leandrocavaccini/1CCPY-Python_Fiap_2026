@@ -1,5 +1,3 @@
-from rope.base.pycore import perform_soa_on_changed_scopes
-
 print('olá mundo')
 
 print(7 + 4)
